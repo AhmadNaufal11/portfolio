@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Naufal — Projects</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="page-indicator">PG 5/6</div>
+
+<nav class="comic-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="location.href='index.html'" tabindex="0" role="button">AHMAD N.</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i> MENU</button>
+    <div class="nav-links" id="navLinks" role="menubar">
+      <a class="nav-link" href="index.html" role="menuitem">Home</a>
+      <a class="nav-link" href="aboutme.html" role="menuitem">About Me</a>
+      <a class="nav-link" href="academic.html" role="menuitem">Academic</a>
+      <a class="nav-link" href="skill.html" role="menuitem">Skill</a>
+      <a class="nav-link active" href="project.html" role="menuitem">Project</a>
+      <a class="nav-link" href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="reveal">
+    <h2 class="section-title">My Projects</h2>
+  </div>
+
+  <div style="margin-top:2rem;">
+    <!-- Project 1 -->
+    <div class="project-card reveal" onclick="openModal(0)" style="cursor:pointer; transform:rotate(-0.5deg);">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#FF6D00,#FF2D2D);">
+        <i class="fas fa-clipboard-list"></i>
+      </div>
+      <div class="project-info">
+        <h3 class="project-name">Student Attendance System</h3>
+        <p class="project-desc">A web-based attendance management system built for diploma final year project. Features QR code scanning, real-time attendance tracking, and automated report generation for lecturers.</p>
+        <div class="project-tags">
+          <span class="project-tag">PHP</span>
+          <span class="project-tag">MySQL</span>
+          <span class="project-tag">Bootstrap</span>
+          <span class="project-tag">QR Code</span>
+        </div>
+        <button class="comic-btn" style="margin-top:0.8rem;">View Details</button>
+      </div>
+      <div class="float-dot" style="width:12px;height:12px;background:var(--yellow);top:10px;right:10px;" aria-hidden="true"></div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card reveal" onclick="openModal(1)" style="cursor:pointer; transform:rotate(0.5deg);">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#0057B8,#00C853);">
+        <i class="fas fa-store"></i>
+      </div>
+      <div class="project-info">
+        <h3 class="project-name">E-Commerce Website</h3>
+        <p class="project-desc">Online shopping platform with product catalog, shopping cart, user authentication, and payment integration. Designed with responsive layout for mobile and desktop users.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML/CSS</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">PHP</span>
+          <span class="project-tag">MySQL</span>
+        </div>
+        <button class="comic-btn" style="margin-top:0.8rem;">View Details</button>
+      </div>
+      <div class="float-dot" style="width:10px;height:10px;background:var(--blue);bottom:10px;left:10px;" aria-hidden="true"></div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card reveal" onclick="openModal(2)" style="cursor:pointer; transform:rotate(-0.3deg);">
+      <div class="project-thumb" style="background:linear-gradient(135deg,#FF69B4,#FFD700);">
+        <i class="fas fa-tasks"></i>
+      </div>
+      <div class="project-info">
+        <h3 class="project-name">Task Management App</h3>
+        <p class="project-desc">A simple task management application with drag-and-drop functionality, priority levels, due date reminders, and category organization. Built as a personal project to practice JavaScript.</p>
+        <div class="project-tags">
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">HTML/CSS</span>
+          <span class="project-tag">Local Storage</span>
+          <span class="project-tag">UI Design</span>
+        </div>
+        <button class="comic-btn" style="margin-top:0.8rem;">View Details</button>
+      </div>
+      <div class="float-dot" style="width:14px;height:14px;background:var(--pink);top:10px;right:10px;" aria-hidden="true"></div>
+    </div>
+  </div>
+</main>
+
+<!-- Modal -->
+<div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-label="Project details">
+  <div class="modal-panel">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close"><i class="fas fa-times-circle"></i></button>
+    <div class="modal-thumb" id="modalThumb"></div>
+    <div class="modal-body">
+      <h2 id="modalTitle" style="font-family:var(--font-comic);font-size:1.8rem;letter-spacing:2px;margin-bottom:1rem;text-transform:uppercase;"></h2>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+</div>
+
+<footer class="comic-footer">
+  <p>Ahmad Naufal &copy; 2026 — Portfolio</p>
+</footer>
+
+<script>
+  const projects=[
+    {title:'Student Attendance System',color:'linear-gradient(135deg,#FF6D00,#FF2D2D)',icon:'fa-clipboard-list',
+      content:`<p style="margin-bottom:1rem;line-height:1.8;"><strong>Role:</strong> Full-Stack Developer (Diploma Final Year Project)</p>
+      <p style="margin-bottom:1rem;line-height:1.8;">Developed a comprehensive attendance management system to replace manual attendance recording. The system uses QR codes generated for each student, which are scanned by lecturers during class to record attendance automatically.</p>
+      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Features:</strong> QR code generation and scanning, real-time dashboard for attendance statistics, automated PDF/Excel report generation, student and lecturer login roles, class schedule management, and absence alert notifications.</p>
+      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Technical Stack:</strong> PHP, MySQL, Bootstrap, JavaScript, QR Code library (phpqrcode)</p>
+      <p style="line-height:1.8;color:#777;">This project strengthened my understanding of full-stack web development, database design, and user authentication systems.</p>`},
+    {title:'E-Commerce Website',color:'linear-gradient(135deg,#0057B8,#00C853)',icon:'fa-store',
+      content:`<p style="margin-bottom:1rem;line-height:1.8;"><strong>Role:</strong> Front-end & Back-end Developer</p>
+      <p style="margin-bottom:1rem;line-height:1.8;">Built an online shopping platform as a group project during diploma studies. The platform allows users to browse products, add items to cart, checkout with payment simulation, and track order status.</p>
+      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Features:</strong> Product catalog with search and filter, shopping cart with quantity management, user registration and login, checkout flow with form validation, admin panel for product management, responsive design for mobile.</p>
+      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Technical Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+      <p style="line-height:1.8;color:#777;">Learned valuable lessons in team collaboration, code organization, and building user-friendly shopping experiences.</p>`},
+    {title:'Task Management App',color:'linear-gradient(135deg,#FF69B4,#FFD700)',icon:'fa-tasks',
+      content:`<p style="margin-bottom:1rem;line-height:1.8;"><strong>Role:</strong> Solo Developer (Personal Project)</p>
+      <p style="margin-bottom:1rem;line-height:1.8;">A personal project built to practice JavaScript DOM manipulation and modern CSS techniques. The app helps users organize tasks with categories, priorities, and due dates.</p>
+      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Features:</strong> Add, edit, delete tasks, drag-and-drop reordering, priority levels (high, medium, low), due date with overdue highlighting, category filtering, data persistence using LocalStorage, clean and intuitive UI.</p>
+      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Technical Stack:</strong> HTML, CSS, Vanilla JavaScript, LocalStorage API</p>
+      <p style="line-height:1.8;color:#777;">This project helped me deepen my JavaScript skills and understand the importance of clean UI/UX design in productivity tools.</p>`}
+  ];
+
+  function openModal(i){
+    const p=projects[i];
+    document.getElementById('modalThumb').style.background=p.color;
+    document.getElementById('modalThumb').innerHTML=`<i class="fas ${p.icon}"></i>`;
+    document.getElementById('modalTitle').textContent=p.title;
+    document.getElementById('modalContent').innerHTML=p.content;
+    document.getElementById('projectModal').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeModal(){
+    document.getElementById('projectModal').classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.getElementById('projectModal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+  document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
+  const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+  const dot=document.getElementById('cursorDot');let mx=0,my=0,dx=0,dy=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  (function c(){dx+=(mx-dx)*.15;dy+=(my-dy)*.15;dot.style.left=(dx-5)+'px';dot.style.top=(dy-5)+'px';requestAnimationFrame(c);})();
+  if('ontouchstart'in window)dot.style.display='none';
+</script>
+</body>
+</html>

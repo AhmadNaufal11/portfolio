@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Naufal — Contact</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="page-indicator">PG 6/6</div>
+
+<nav class="comic-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="location.href='index.html'" tabindex="0" role="button">AHMAD N.</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i> MENU</button>
+    <div class="nav-links" id="navLinks" role="menubar">
+      <a class="nav-link" href="index.html" role="menuitem">Home</a>
+      <a class="nav-link" href="aboutme.html" role="menuitem">About Me</a>
+      <a class="nav-link" href="academic.html" role="menuitem">Academic</a>
+      <a class="nav-link" href="skill.html" role="menuitem">Skill</a>
+      <a class="nav-link" href="project.html" role="menuitem">Project</a>
+      <a class="nav-link active" href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="reveal">
+    <h2 class="section-title">Get In Touch</h2>
+  </div>
+
+  <!-- Speech bubble greeting -->
+  <div class="reveal" style="margin-top:2rem;">
+    <div class="bubble">
+      Thanks for reading my portfolio! Let's create something amazing together!
+    </div>
+  </div>
+
+  <div class="contact-grid">
+    <!-- Left: Contact Info + Social -->
+    <div>
+      <div class="panel panel-skew reveal">
+        <div class="contact-info-item">
+          <div class="contact-info-icon" style="background:var(--blue);color:var(--white);"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value">naufala091@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon" style="background:var(--green);color:var(--white);"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="contact-info-label">Phone</div>
+            <div class="contact-info-value">011 - 237 59701</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon" style="background:var(--red);color:var(--white);"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-value">Selangor, Malaysia</div>
+          </div>
+        </div>
+        <div class="float-dot" style="width:12px;height:12px;background:var(--blue);top:15px;right:15px;" aria-hidden="true"></div>
+      </div>
+
+      <div class="panel panel-skew-r reveal" style="margin-top:1.5rem;">
+        <h3 style="font-family:var(--font-comic);font-size:1.4rem;letter-spacing:2px;margin-bottom:1.2rem;text-transform:uppercase;">
+          <i class="fas fa-globe" style="color:var(--blue);"></i> Find Me Online
+        </h3>
+        <div class="social-grid">
+          <a href="#" class="social-link" style="background:var(--blue);color:var(--white);" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" style="background:var(--ink);color:var(--white);" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-link" style="background:var(--pink);color:var(--white);" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" style="background:var(--blue);color:var(--white);" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link" style="background:#25D366;color:var(--white);" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="float-dot" style="width:14px;height:14px;background:var(--pink);bottom:15px;left:15px;" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="panel panel-skew reveal" style="padding:2.5rem;">
+      <div class="float-dot" style="width:16px;height:16px;background:var(--red);top:15px;right:15px;" aria-hidden="true"></div>
+      <h3 style="font-family:var(--font-comic);font-size:1.4rem;letter-spacing:2px;margin-bottom:1.5rem;text-transform:uppercase;">
+        <i class="fas fa-paper-plane" style="color:var(--orange);"></i> Send a Message
+      </h3>
+      <form id="contactForm" onsubmit="handleContact(event)">
+        <div class="form-group">
+          <label class="form-label" for="nameInput"><i class="fas fa-user"></i> Your Name</label>
+          <input class="form-input" type="text" id="nameInput" placeholder="Enter your name..." required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="emailInput"><i class="fas fa-at"></i> Your Email</label>
+          <input class="form-input" type="email" id="emailInput" placeholder="your@email.com" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="subjectInput"><i class="fas fa-tag"></i> Subject</label>
+          <input class="form-input" type="text" id="subjectInput" placeholder="What's this about?" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="messageInput"><i class="fas fa-comment-dots"></i> Message</label>
+          <textarea class="form-textarea" id="messageInput" placeholder="Tell me about your project, idea, or just say hi..." required aria-required="true"></textarea>
+        </div>
+        <button type="submit" class="comic-btn" style="width:100%;text-align:center;">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+      <div class="float-dot" style="width:10px;height:10px;background:var(--green);bottom:15px;left:15px;" aria-hidden="true"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="comic-footer">
+  <p>Ahmad Naufal &copy; 2026 — Portfolio</p>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
+  const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+  function handleContact(e){
+    e.preventDefault();
+    const name=document.getElementById('nameInput').value.trim();
+    const email=document.getElementById('emailInput').value.trim();
+    const subject=document.getElementById('subjectInput').value.trim();
+    const message=document.getElementById('messageInput').value.trim();
+    if(!name||!email||!subject||!message){showToast('Please fill in all fields!');return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showToast('Please enter a valid email!');return;}
+    showToast('Thanks '+name+'! Message received!');
+    e.target.reset();
+  }
+
+  function showToast(msg){
+    const t=document.getElementById('toast');
+    t.textContent=msg;t.style.transform='translateX(0)';
+    setTimeout(()=>{t.style.transform='translateX(150%)';},3000);
+  }
+
+  const dot=document.getElementById('cursorDot');let mx=0,my=0,dx=0,dy=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  (function c(){dx+=(mx-dx)*.15;dy+=(my-dy)*.15;dot.style.left=(dx-5)+'px';dot.style.top=(dy-5)+'px';requestAnimationFrame(c);})();
+  if('ontouchstart'in window)dot.style.display='none';
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Naufal — Academic</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="academic.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="page-indicator">PG 3/6</div>
+
+<nav class="comic-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="location.href='index.html'" tabindex="0" role="button">AHMAD N.</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i> MENU</button>
+    <div class="nav-links" id="navLinks" role="menubar">
+      <a class="nav-link" href="index.html" role="menuitem">Home</a>
+      <a class="nav-link" href="aboutme.html" role="menuitem">About Me</a>
+      <a class="nav-link active" href="academic.html" role="menuitem">Academic</a>
+      <a class="nav-link" href="skill.html" role="menuitem">Skill</a>
+      <a class="nav-link" href="project.html" role="menuitem">Project</a>
+      <a class="nav-link" href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="reveal">
+    <h2 class="section-title">Academic Journey</h2>
+  </div>
+
+  <div class="academic-grid" style="display:grid; grid-template-columns:1.4fr 1fr; gap:2rem; margin-top:2rem;">
+    <!-- Left: Timeline -->
+    <div class="panel panel-skew reveal">
+      <div class="float-dot" style="width:14px;height:14px;background:var(--red);top:15px;right:15px;" aria-hidden="true"></div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2025 — 2028</div>
+          <div class="timeline-degree">Bachelor of Software Development</div>
+          <div class="timeline-school"><i class="fas fa-university"></i> Universiti Teknikal Malaysia Melaka (UTEM)</div>
+          <div class="timeline-details">Currently pursuing undergraduate degree, focusing on software engineering principles, database management, web development, and software project management.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2022 — 2025</div>
+          <div class="timeline-degree">Diploma in Computer Science</div>
+          <div class="timeline-school"><i class="fas fa-university"></i> Kolej Profesional MARA Beranang (KPMB)</div>
+          <div class="timeline-details">CGPA: <strong>3.77</strong> — Gained strong foundation in programming, data structures, algorithms, object-oriented programming, and database systems.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2017 — 2021</div>
+          <div class="timeline-degree">SPM (Sijil Pelajaran Malaysia)</div>
+          <div class="timeline-school"><i class="fas fa-school"></i> SMK Pendamaran Jaya</div>
+          <div class="timeline-details">Results: 1A, 1A-, 3B+, 2C+, 1C, 1D — Developed early interest in technology in computer structure and computer system. how the computer is operating.</div>
+        </div>
+      </div>
+      <div class="float-dot" style="width:10px;height:10px;background:var(--yellow);bottom:15px;left:15px;" aria-hidden="true"></div>
+    </div>
+
+    <!-- Right: Certifications + Activity -->
+    <div>
+      <div class="panel panel-skew-r reveal" style="margin-bottom:1.5rem; background:var(--blue); color:var(--white);">
+        <h3 style="font-family:var(--font-comic);font-size:1.4rem;letter-spacing:2px;margin-bottom:1.2rem;text-transform:uppercase;text-shadow:2px 2px 0 rgba(0,0,0,0.3);">
+          <i class="fas fa-certificate" style="color:var(--yellow);"></i> Certifications
+        </h3>
+        <div class="cert-item"><i class="fas fa-trophy"></i><span>National Level Competition of Excellence Young Innovators Challenge</span></div>
+        <div class="cert-item"><i class="fas fa-medal"></i><span>Diploma Dean's List — Multiple Semesters</span></div>
+        <div class="cert-item"><i class="fas fa-certificate"></i><span>Completion a Tutoring Cycle with TAE TFM Tutoring Programme</span></div>
+        <div class="float-dot" style="width:12px;height:12px;background:var(--yellow);bottom:15px;right:15px;" aria-hidden="true"></div>
+      </div>
+
+      <!-- Activity Grid — matching sketch -->
+      <div class="panel panel-skew reveal">
+        <h3 style="font-family:var(--font-comic);font-size:1.4rem;letter-spacing:2px;margin-bottom:1.2rem;text-transform:uppercase;text-shadow:2px 2px 0 rgba(0,0,0,0.1);">
+          <i class="fas fa-images" style="color:var(--blue);"></i> Activity
+        </h3>
+        <div class="activity-grid">
+          <!-- Row 1 -->
+          <div class="activity-img-box" style="background:linear-gradient(135deg, var(--blue), var(--green));">
+            <i class="fas fa-camera"></i>
+            <span>IMAGE</span>
+          </div>
+          <div class="activity-img-box" style="background:linear-gradient(135deg, var(--pink), var(--orange));">
+            <i class="fas fa-camera"></i>
+            <span>IMAGE</span>
+          </div>
+          <!-- Row 2 -->
+          <div class="activity-img-box" style="background:linear-gradient(135deg, var(--yellow), var(--orange));">
+            <i class="fas fa-camera"></i>
+            <span>IMAGE</span>
+          </div>
+          <div class="activity-img-box" style="background:linear-gradient(135deg, var(--red), var(--pink));">
+            <i class="fas fa-camera"></i>
+            <span>IMAGE</span>
+          </div>
+          <!-- Row 3 -->
+          <div class="activity-img-box" style="background:linear-gradient(135deg, var(--green), var(--blue));">
+            <i class="fas fa-camera"></i>
+            <span>IMAGE</span>
+          </div>
+          <div class="activity-img-box" style="background:linear-gradient(135deg, var(--orange), var(--red));">
+            <i class="fas fa-camera"></i>
+            <span>IMAGE</span>
+          </div>
+        </div>
+        <div class="float-dot" style="width:14px;height:14px;background:var(--red);bottom:15px;right:15px;" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="comic-footer">
+  <p>Ahmad Naufal &copy; 2026 — Portfolio</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
+  const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+  const dot=document.getElementById('cursorDot');let mx=0,my=0,dx=0,dy=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  (function c(){dx+=(mx-dx)*.15;dy+=(my-dy)*.15;dot.style.left=(dx-5)+'px';dot.style.top=(dy-5)+'px';requestAnimationFrame(c);})();
+  if('ontouchstart'in window)dot.style.display='none';
+</script>
+</body>
+</html>

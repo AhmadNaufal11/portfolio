@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Naufal — Skills</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="skill.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="page-indicator">PG 4/6</div>
+
+<nav class="comic-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="location.href='index.html'" tabindex="0" role="button">AHMAD N.</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i> MENU</button>
+    <div class="nav-links" id="navLinks" role="menubar">
+      <a class="nav-link" href="index.html" role="menuitem">Home</a>
+      <a class="nav-link" href="aboutme.html" role="menuitem">About Me</a>
+      <a class="nav-link" href="academic.html" role="menuitem">Academic</a>
+      <a class="nav-link active" href="skill.html" role="menuitem">Skill</a>
+      <a class="nav-link" href="project.html" role="menuitem">Project</a>
+      <a class="nav-link" href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="reveal">
+    <h2 class="section-title">My Skills</h2>
+  </div>
+
+  <div class="skills-grid">
+    <!-- LANGUAGE SKILLS -->
+    <div class="panel panel-skew reveal">
+      <div class="skill-category-title" style="color:var(--blue);">
+        <i class="fas fa-language" style="font-size:1.3rem;"></i> Language Skills
+      </div>
+      <div class="lang-item">
+        <span class="lang-name"><i class="fas fa-comment" style="color:var(--green);"></i> Bahasa Melayu</span>
+        <span class="lang-level intermediate">Intermediate</span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name"><i class="fas fa-comment" style="color:var(--blue);"></i> Bahasa English</span>
+        <span class="lang-level basic">Basic</span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name"><i class="fas fa-comment" style="color:var(--orange);"></i> German</span>
+        <span class="lang-level basic">Basic</span>
+      </div>
+      <div class="float-dot" style="width:12px;height:12px;background:var(--blue);bottom:15px;right:15px;" aria-hidden="true"></div>
+    </div>
+
+    <!-- DESIGN SKILLS -->
+    <div class="panel panel-skew-r reveal" style="animation-delay:0.1s;">
+      <div class="skill-category-title" style="color:var(--pink);">
+        <i class="fas fa-palette" style="font-size:1.3rem;"></i> Design Skills
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>UI/UX Design</span><span>Basic</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="40" style="background:var(--pink);"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Visual Design</span><span>Basic</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="35" style="background:var(--red);"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span>Wireframe Design</span><span>Basic</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="45" style="background:var(--orange);"></div></div>
+      </div>
+      <div class="float-dot" style="width:14px;height:14px;background:var(--pink);top:15px;left:15px;" aria-hidden="true"></div>
+    </div>
+
+    <!-- TECHNICAL SKILLS -->
+    <div class="panel panel-skew reveal" style="animation-delay:0.2s;">
+      <div class="skill-category-title" style="color:var(--green);">
+        <i class="fas fa-code" style="font-size:1.3rem;"></i> Technical Skills
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span><i class="fab fa-html5" style="color:#E44D26;"></i> HTML / CSS</span><span>80%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="80" style="background:var(--orange);"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span><i class="fab fa-js-square" style="color:#F7DF1E;"></i> JavaScript</span><span>65%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="65" style="background:var(--yellow);"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span><i class="fab fa-python" style="color:#3776AB;"></i> Python</span><span>70%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="70" style="background:var(--blue);"></div></div>
+      </div>
+      <div class="skill-bar-wrap">
+        <div class="skill-bar-label"><span><i class="fas fa-database" style="color:#00758F;"></i> MySQL</span><span>60%</span></div>
+        <div class="skill-bar"><div class="skill-bar-fill" data-width="60" style="background:var(--green);"></div></div>
+      </div>
+      <div class="float-dot" style="width:10px;height:10px;background:var(--green);bottom:15px;left:15px;" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Additional tools panel -->
+  <div class="panel panel-skew-r reveal" style="margin-top:2rem; background:var(--cream);">
+    <h3 class="skill-category-title" style="color:var(--red);">
+      <i class="fas fa-tools" style="font-size:1.3rem;"></i> Tools & Software
+    </h3>
+    <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+      <span style="font-family:var(--font-comic);font-size:0.85rem;letter-spacing:1px;padding:0.5rem 1rem;border:2px solid var(--ink);background:var(--white);box-shadow:3px 3px 0 var(--ink);text-transform:uppercase;transition:all 0.2s;cursor:default;" onmouseover="this.style.transform='rotate(-3deg) scale(1.05)';this.style.boxShadow='5px 5px 0 var(--ink)'" onmouseout="this.style.transform='';this.style.boxShadow='3px 3px 0 var(--ink)'">
+        <i class="fab fa-file-excel" style="color:var(--pink);"></i> excell
+      </span>
+      <span style="font-family:var(--font-comic);font-size:0.85rem;letter-spacing:1px;padding:0.5rem 1rem;border:2px solid var(--ink);background:var(--white);box-shadow:3px 3px 0 var(--ink);text-transform:uppercase;transition:all 0.2s;cursor:default;" onmouseover="this.style.transform='rotate(-3deg) scale(1.05)';this.style.boxShadow='5px 5px 0 var(--ink)'" onmouseout="this.style.transform='';this.style.boxShadow='3px 3px 0 var(--ink)'">
+        <i class="fab fa-github" style="color:var(--ink);"></i> GitHub
+      </span>
+      <span style="font-family:var(--font-comic);font-size:0.85rem;letter-spacing:1px;padding:0.5rem 1rem;border:2px solid var(--ink);background:var(--white);box-shadow:3px 3px 0 var(--ink);text-transform:uppercase;transition:all 0.2s;cursor:default;" onmouseover="this.style.transform='rotate(-3deg) scale(1.05)';this.style.boxShadow='5px 5px 0 var(--ink)'" onmouseout="this.style.transform='';this.style.boxShadow='3px 3px 0 var(--ink)'">
+        <i class="fas fa-code" style="color:var(--blue);"></i> VS Code
+      </span>
+      <span style="font-family:var(--font-comic);font-size:0.85rem;letter-spacing:1px;padding:0.5rem 1rem;border:2px solid var(--ink);background:var(--white);box-shadow:3px 3px 0 var(--ink);text-transform:uppercase;transition:all 0.2s;cursor:default;" onmouseover="this.style.transform='rotate(-3deg) scale(1.05)';this.style.boxShadow='5px 5px 0 var(--ink)'" onmouseout="this.style.transform='';this.style.boxShadow='3px 3px 0 var(--ink)'">
+        <i class="fas fa-database" style="color:#00758F;"></i> MySQL
+      </span>
+      <span style="font-family:var(--font-comic);font-size:0.85rem;letter-spacing:1px;padding:0.5rem 1rem;border:2px solid var(--ink);background:var(--white);box-shadow:3px 3px 0 var(--ink);text-transform:uppercase;transition:all 0.2s;cursor:default;" onmouseover="this.style.transform='rotate(-3deg) scale(1.05)';this.style.boxShadow='5px 5px 0 var(--ink)'" onmouseout="this.style.transform='';this.style.boxShadow='3px 3px 0 var(--ink)'">
+        <i class="fas fa-file-powerpoint" style="color:var(--red);"></i> powerpoint
+      </span>
+      <span style="font-family:var(--font-comic);font-size:0.85rem;letter-spacing:1px;padding:0.5rem 1rem;border:2px solid var(--ink);background:var(--white);box-shadow:3px 3px 0 var(--ink);text-transform:uppercase;transition:all 0.2s;cursor:default;" onmouseover="this.style.transform='rotate(-3deg) scale(1.05)';this.style.boxShadow='5px 5px 0 var(--ink)'" onmouseout="this.style.transform='';this.style.boxShadow='3px 3px 0 var(--ink)'">
+        <i class="fas fa-terminal" style="color:var(--green);"></i> Terminal
+      </span>
+    </div>
+    <div class="float-dot" style="width:16px;height:16px;background:var(--red);top:15px;right:15px;" aria-hidden="true"></div>
+  </div>
+</main>
+
+<footer class="comic-footer">
+  <p>Ahmad Naufal &copy; 2026 — Portfolio</p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
+  const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');
+    x.target.querySelectorAll('.skill-bar-fill').forEach(b=>{const w=b.dataset.width;if(w){b.style.width='0%';requestAnimationFrame(()=>requestAnimationFrame(()=>{b.style.width=w+'%';}));}});
+  }});},{threshold:0.15});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+  const dot=document.getElementById('cursorDot');let mx=0,my=0,dx=0,dy=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  (function c(){dx+=(mx-dx)*.15;dy+=(my-dy)*.15;dot.style.left=(dx-5)+'px';dot.style.top=(dy-5)+'px';requestAnimationFrame(c);})();
+  if('ontouchstart'in window)dot.style.display='none';
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Naufal — Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="page-indicator">PG 1/6</div>
+
+<!-- NAV -->
+<nav class="comic-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="location.href='index.html'" tabindex="0" role="button">AHMAD N.</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i> MENU</button>
+    <div class="nav-links" id="navLinks" role="menubar">
+      <a class="nav-link active" href="index.html" role="menuitem">Home</a>
+      <a class="nav-link" href="aboutme.html" role="menuitem">About Me</a>
+      <a class="nav-link" href="academic.html" role="menuitem">Academic</a>
+      <a class="nav-link" href="skill.html" role="menuitem">Skill</a>
+      <a class="nav-link" href="project.html" role="menuitem">Project</a>
+      <a class="nav-link" href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<main class="hero">
+  <div class="hero-inner">
+    <!-- Left: Image Panel -->
+    <div class="hero-image-panel panel reveal" style="padding: 1rem; position: relative;">
+      <div class="hero-image">
+         <img src="passportmerah.png" alt="Ahmad Naufal passport photo">
+      </div>
+      <!-- Decorative dots -->
+      <div class="float-dot" style="width:14px; height:14px; background:var(--yellow); bottom:-10px; left:-10px;" aria-hidden="true"></div>
+      <div class="float-dot" style="width:10px; height:10px; background:var(--pink); top:15px; right:15px;" aria-hidden="true"></div>
+    </div>
+
+    <!-- Right: Text Panel -->
+    <div class="hero-text-panel panel reveal" style="animation-delay: 0.15s;">
+      <div style="position: relative;">
+        <p class="hero-greeting">Hello, World!</p>
+        <h1 class="hero-name">I'm Ahmad Naufal</h1>
+        <p class="hero-role">Software Development Student</p>
+        <p class="hero-desc">
+          Passionate about building software that solves real problems. Currently pursuing my degree in Software Development at UTEM, with a strong foundation in programming and a growing interest in UI/UX design.
+        </p>
+        <div class="hero-buttons">
+          <a href="aboutme.html" class="comic-btn"><i class="fas fa-user"></i> About Me</a>
+          <a href="contact.html" class="comic-btn btn-blue"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+      </div>
+      <!-- Decorative dots -->
+      <div class="float-dot" style="width:18px; height:18px; background:var(--blue); bottom:20px; right:20px;" aria-hidden="true"></div>
+      <div class="float-dot" style="width:12px; height:12px; background:var(--red); top:20px; left:20px;" aria-hidden="true"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="comic-footer" style="position:relative;">
+  <p>Ahmad Naufal &copy; 2026 — Portfolio</p>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Scroll reveal
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Cursor dot
+  const dot = document.getElementById('cursorDot');
+  let mx = 0, my = 0, dx = 0, dy = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  (function animCursor() {
+    dx += (mx - dx) * 0.15; dy += (my - dy) * 0.15;
+    dot.style.left = (dx - 5) + 'px'; dot.style.top = (dy - 5) + 'px';
+    requestAnimationFrame(animCursor);
+  })();
+  if ('ontouchstart' in window) dot.style.display = 'none';
+</script>
+</body>
+</html>
