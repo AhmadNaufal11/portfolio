@@ -36,59 +36,57 @@
   <div style="margin-top:2rem;">
     <!-- Project 1 -->
     <div class="project-card reveal" onclick="openModal(0)" style="cursor:pointer; transform:rotate(-0.5deg);">
-      <div class="project-thumb" style="background:linear-gradient(135deg,#FF6D00,#FF2D2D);">
-        <i class="fas fa-clipboard-list"></i>
+      <div class="project-thumb">
+        <img src="c++.png" alt="Airline Reservation System screenshot" onerror="this.src='https://placehold.co/600x400/E2E8F0/1E293B?text=Airline+System'">
       </div>
       <div class="project-info">
-        <h3 class="project-name">Student Attendance System</h3>
-        <p class="project-desc">A web-based attendance management system built for diploma final year project. Features QR code scanning, real-time attendance tracking, and automated report generation for lecturers.</p>
+        <h3 class="project-name">Airline Reservation System</h3>
+        <p class="project-desc">A c++ Airline Reservation System build for subject programming Technique project. Features Flight Schedule &amp; Seat Availability, Ticket Booking &amp; Cancellation, Payment and Receipt Generation, Passenger &amp; Booking Record.</p>
         <div class="project-tags">
-          <span class="project-tag">PHP</span>
-          <span class="project-tag">MySQL</span>
-          <span class="project-tag">Bootstrap</span>
-          <span class="project-tag">QR Code</span>
+          <span class="project-tag">c++</span>
+          <span class="project-tag">terminal</span>
         </div>
-        <button class="comic-btn" style="margin-top:0.8rem;">View Details</button>
+        <button class="comic-btn">View Details</button>
       </div>
-      <div class="float-dot" style="width:12px;height:12px;background:var(--yellow);top:10px;right:10px;" aria-hidden="true"></div>
+      <div class="float-dot" style="width:12px;height:12px;background:var(--primary);top:10px;right:10px;" aria-hidden="true"></div>
     </div>
 
     <!-- Project 2 -->
     <div class="project-card reveal" onclick="openModal(1)" style="cursor:pointer; transform:rotate(0.5deg);">
-      <div class="project-thumb" style="background:linear-gradient(135deg,#0057B8,#00C853);">
-        <i class="fas fa-store"></i>
+      <div class="project-thumb">
+        <img src="khairat kematian.png" alt="Khairat Kematian Website screenshot" onerror="this.src='https://placehold.co/600x400/E2E8F0/1E293B?text=Khairat+Kematian'">
       </div>
       <div class="project-info">
-        <h3 class="project-name">E-Commerce Website</h3>
-        <p class="project-desc">Online shopping platform with product catalog, shopping cart, user authentication, and payment integration. Designed with responsive layout for mobile and desktop users.</p>
+        <h3 class="project-name">Khairat Kematian Website</h3>
+        <p class="project-desc">Khairat Kematian platform with Homepage, User login, Admin Login, Applying for Membership, Payment Record &amp; Process, Contact, and Claim Khairat Kematian. Designed with responsive layout for mobile and desktop users.</p>
         <div class="project-tags">
           <span class="project-tag">HTML/CSS</span>
           <span class="project-tag">JavaScript</span>
-          <span class="project-tag">PHP</span>
+          <span class="project-tag">Django</span>
           <span class="project-tag">MySQL</span>
         </div>
-        <button class="comic-btn" style="margin-top:0.8rem;">View Details</button>
+        <button class="comic-btn">View Details</button>
       </div>
-      <div class="float-dot" style="width:10px;height:10px;background:var(--blue);bottom:10px;left:10px;" aria-hidden="true"></div>
+      <div class="float-dot" style="width:10px;height:10px;background:var(--accent);bottom:10px;left:10px;" aria-hidden="true"></div>
     </div>
 
     <!-- Project 3 -->
     <div class="project-card reveal" onclick="openModal(2)" style="cursor:pointer; transform:rotate(-0.3deg);">
-      <div class="project-thumb" style="background:linear-gradient(135deg,#FF69B4,#FFD700);">
-        <i class="fas fa-tasks"></i>
+      <div class="project-thumb">
+        <img src="cisco.png" alt="LAN Design Cisco Packet Tracer screenshot" onerror="this.src='https://placehold.co/600x400/E2E8F0/1E293B?text=LAN+Design'">
       </div>
       <div class="project-info">
-        <h3 class="project-name">Task Management App</h3>
-        <p class="project-desc">A simple task management application with drag-and-drop functionality, priority levels, due date reminders, and category organization. Built as a personal project to practice JavaScript.</p>
+        <h3 class="project-name">LAN DESIGN — SEPAKAT SDN BHD</h3>
+        <p class="project-desc">Designed and analyzed a secure Local Area Networking (LAN) system for a multi-building company, applying hierarchical network design, IP subnetting, VLANs, and LAN security technologies. Built as a Final Assignment.</p>
         <div class="project-tags">
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">HTML/CSS</span>
-          <span class="project-tag">Local Storage</span>
-          <span class="project-tag">UI Design</span>
+          <span class="project-tag">CISCO PACKET TRACER</span>
+          <span class="project-tag">IP SUBNETTING</span>
+          <span class="project-tag">VLAN / VTP / DHCP</span>
+          <span class="project-tag">NETWORK SECURITY</span>
         </div>
-        <button class="comic-btn" style="margin-top:0.8rem;">View Details</button>
+        <button class="comic-btn">View Details</button>
       </div>
-      <div class="float-dot" style="width:14px;height:14px;background:var(--pink);top:10px;right:10px;" aria-hidden="true"></div>
+      <div class="float-dot" style="width:14px;height:14px;background:var(--primary);top:10px;right:10px;" aria-hidden="true"></div>
     </div>
   </div>
 </main>
@@ -99,42 +97,49 @@
     <button class="modal-close" onclick="closeModal()" aria-label="Close"><i class="fas fa-times-circle"></i></button>
     <div class="modal-thumb" id="modalThumb"></div>
     <div class="modal-body">
-      <h2 id="modalTitle" style="font-family:var(--font-comic);font-size:1.8rem;letter-spacing:2px;margin-bottom:1rem;text-transform:uppercase;"></h2>
+      <h2 id="modalTitle" style="font-family:var(--font-comic);font-size:1.8rem;letter-spacing:2px;margin-bottom:1rem;text-transform:uppercase; color:var(--primary);"></h2>
       <div id="modalContent"></div>
     </div>
   </div>
 </div>
 
-<footer class="comic-footer">
-  <p>Ahmad Naufal &copy; 2026 — Portfolio</p>
+<!-- FOOTER -->
+<footer class="notebook-footer">
+  <div class="footer-inner">
+    <div class="footer-text">
+      <p class="footer-line-1">My Portfolio</p>
+      <p class="footer-line-2">Thank you for visiting my Portfolio</p>
+      <p class="footer-line-3">Current Date &amp; Time : <span id="liveDateTime">--</span></p>
+    </div>
+    <button class="back-to-top-btn" id="backToTop" aria-label="Back to top" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
 </footer>
 
 <script>
   const projects=[
-    {title:'Student Attendance System',color:'linear-gradient(135deg,#FF6D00,#FF2D2D)',icon:'fa-clipboard-list',
-      content:`<p style="margin-bottom:1rem;line-height:1.8;"><strong>Role:</strong> Full-Stack Developer (Diploma Final Year Project)</p>
-      <p style="margin-bottom:1rem;line-height:1.8;">Developed a comprehensive attendance management system to replace manual attendance recording. The system uses QR codes generated for each student, which are scanned by lecturers during class to record attendance automatically.</p>
-      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Features:</strong> QR code generation and scanning, real-time dashboard for attendance statistics, automated PDF/Excel report generation, student and lecturer login roles, class schedule management, and absence alert notifications.</p>
-      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Technical Stack:</strong> PHP, MySQL, Bootstrap, JavaScript, QR Code library (phpqrcode)</p>
-      <p style="line-height:1.8;color:#777;">This project strengthened my understanding of full-stack web development, database design, and user authentication systems.</p>`},
-    {title:'E-Commerce Website',color:'linear-gradient(135deg,#0057B8,#00C853)',icon:'fa-store',
-      content:`<p style="margin-bottom:1rem;line-height:1.8;"><strong>Role:</strong> Front-end & Back-end Developer</p>
-      <p style="margin-bottom:1rem;line-height:1.8;">Built an online shopping platform as a group project during diploma studies. The platform allows users to browse products, add items to cart, checkout with payment simulation, and track order status.</p>
-      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Features:</strong> Product catalog with search and filter, shopping cart with quantity management, user registration and login, checkout flow with form validation, admin panel for product management, responsive design for mobile.</p>
-      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Technical Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-      <p style="line-height:1.8;color:#777;">Learned valuable lessons in team collaboration, code organization, and building user-friendly shopping experiences.</p>`},
-    {title:'Task Management App',color:'linear-gradient(135deg,#FF69B4,#FFD700)',icon:'fa-tasks',
-      content:`<p style="margin-bottom:1rem;line-height:1.8;"><strong>Role:</strong> Solo Developer (Personal Project)</p>
-      <p style="margin-bottom:1rem;line-height:1.8;">A personal project built to practice JavaScript DOM manipulation and modern CSS techniques. The app helps users organize tasks with categories, priorities, and due dates.</p>
-      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Features:</strong> Add, edit, delete tasks, drag-and-drop reordering, priority levels (high, medium, low), due date with overdue highlighting, category filtering, data persistence using LocalStorage, clean and intuitive UI.</p>
-      <p style="margin-bottom:1rem;line-height:1.8;"><strong>Technical Stack:</strong> HTML, CSS, Vanilla JavaScript, LocalStorage API</p>
-      <p style="line-height:1.8;color:#777;">This project helped me deepen my JavaScript skills and understand the importance of clean UI/UX design in productivity tools.</p>`}
+    {title:'Airline Reservation System',img:'c++.png',
+      content:`<p><strong>Role:</strong> Programmer (Programming Technique Project)</p>
+      <p>This Project developed to solve the problem of inefficiencies in booking, cancellation, and ticket management processes. Manual tracking often leads to overbooking, customer's dissatisfaction and revenue losses.</p>
+      <p><strong>Features:</strong> Real-time Flight Schedule &amp; Seat Availability. Easy booking &amp; cancellation logic. Receipt generation making it easy for users to check their information details. Passenger &amp; Booking Records so management can track users efficiently.</p>
+      <p><strong>Technical Stack:</strong> C++, Terminal</p>`},
+    {title:'Khairat Kematian Website',img:'khairat kematian.png',
+      content:`<p><strong>Role:</strong> Front-end &amp; Back-end Developer</p>
+      <p>Built an online Khairat Kematian platform as an individual project during diploma studies. It serves as a centralized web-based system for collecting donations, managing beneficiary information, processing requests, and ensuring transparent fund utilization for Surau Al-Fateh.</p>
+      <p><strong>Features:</strong> Login for User and Admin, Record Applicant Details, Apply for Membership, Membership Status checking, Payment insertion with calculator function, Claim processing, Admin dashboards for approving members and tracking payments.</p>
+      <p><strong>Technical Stack:</strong> HTML, CSS, JavaScript, Django, MySQL</p>`},
+    {title:'LAN DESIGN — SEPAKAT SDN BHD',img:'cisco.png',
+      content:`<p><strong>Role:</strong> Solo Designer (Academic Final Assignment — CSC2773, DCS 5A)</p>
+      <p>A networking project built to practice LAN design, IP addressing, and hierarchical network models. The project simulates a real company scenario where a secure, multi-building LAN was designed to connect departments while enforcing network segmentation and security.</p>
+      <p><strong>Technical Stack:</strong> Cisco Packet Tracer, VLANs, VTP, DHCP, IP Subnetting</p>
+      <p style="color:var(--primary); font-style:italic;">This project deepened my understanding of enterprise network design and the importance of structured, secure LAN infrastructure for real-world business environments.</p>`}
   ];
 
   function openModal(i){
     const p=projects[i];
-    document.getElementById('modalThumb').style.background=p.color;
-    document.getElementById('modalThumb').innerHTML=`<i class="fas ${p.icon}"></i>`;
+    const thumb=document.getElementById('modalThumb');
+    thumb.innerHTML=`<img src="${p.img}" alt="${p.title} screenshot" class="modal-thumb-img" onerror="this.src='https://placehold.co/800x450/E2E8F0/1E293B?text=Project+Image'">`;
     document.getElementById('modalTitle').textContent=p.title;
     document.getElementById('modalContent').innerHTML=p.content;
     document.getElementById('projectModal').classList.add('open');
@@ -150,10 +155,28 @@
   document.getElementById('navToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
   const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+  
   const dot=document.getElementById('cursorDot');let mx=0,my=0,dx=0,dy=0;
   document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
   (function c(){dx+=(mx-dx)*.15;dy+=(my-dy)*.15;dot.style.left=(dx-5)+'px';dot.style.top=(dy-5)+'px';requestAnimationFrame(c);})();
   if('ontouchstart'in window)dot.style.display='none';
+
+  // Back to top
+  document.getElementById('backToTop').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Live date & time
+  function updateDateTime() {
+    const now = new Date();
+    const options = {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    };
+    document.getElementById('liveDateTime').textContent = now.toLocaleDateString('en-US', options);
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
 </script>
 </body>
 </html>

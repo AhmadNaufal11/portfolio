@@ -33,7 +33,6 @@
     <h2 class="section-title">Get In Touch</h2>
   </div>
 
-  <!-- Speech bubble greeting -->
   <div class="reveal" style="margin-top:2rem;">
     <div class="bubble">
       Thanks for reading my portfolio! Let's create something amazing together!
@@ -48,7 +47,7 @@
           <div class="contact-info-icon" style="background:var(--blue);color:var(--white);"><i class="fas fa-envelope"></i></div>
           <div>
             <div class="contact-info-label">Email</div>
-            <div class="contact-info-value">naufala091@gmail.com</div>
+            <div class="contact-info-value">naufal091@gmail.com</div>
           </div>
         </div>
         <div class="contact-info-item">
@@ -65,29 +64,29 @@
             <div class="contact-info-value">Selangor, Malaysia</div>
           </div>
         </div>
-        <div class="float-dot" style="width:12px;height:12px;background:var(--blue);top:15px;right:15px;" aria-hidden="true"></div>
+        <div class="float-dot" style="width:12px;height:12px;background:var(--primary);top:15px;right:15px;" aria-hidden="true"></div>
       </div>
 
-      <div class="panel panel-skew-r reveal" style="margin-top:1.5rem;">
-        <h3 style="font-family:var(--font-comic);font-size:1.4rem;letter-spacing:2px;margin-bottom:1.2rem;text-transform:uppercase;">
-          <i class="fas fa-globe" style="color:var(--blue);"></i> Find Me Online
+      <div class="panel panel-skew-r reveal" style="margin-top:1.5rem; background:var(--bg-lines);">
+        <h3 style="font-family:var(--font-comic);font-size:1.4rem;letter-spacing:2px;margin-bottom:1.2rem;text-transform:uppercase; color:var(--primary);">
+          <i class="fas fa-globe" style="color:var(--accent);"></i> Find Me Online
         </h3>
         <div class="social-grid">
-          <a href="#" class="social-link" style="background:var(--blue);color:var(--white);" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-link" style="background:var(--ink);color:var(--white);" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" class="social-link" style="background:var(--pink);color:var(--white);" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-link" style="background:var(--blue);color:var(--white);" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link" style="background:#25D366;color:var(--white);" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/" class="social-link" style="background:var(--blue);color:var(--white);" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/AhmadNaufal11" class="social-link" style="background:var(--ink);color:var(--white);" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/" class="social-link" style="background:var(--pink);color:var(--white);" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/" class="social-link" style="background:var(--blue);color:var(--white);" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://web.whatsapp.com/" class="social-link" style="background:#25D366;color:var(--white);" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <div class="float-dot" style="width:14px;height:14px;background:var(--pink);bottom:15px;left:15px;" aria-hidden="true"></div>
+        <div class="float-dot" style="width:14px;height:14px;background:var(--accent);bottom:15px;left:15px;" aria-hidden="true"></div>
       </div>
     </div>
 
     <!-- Right: Contact Form -->
     <div class="panel panel-skew reveal" style="padding:2.5rem;">
-      <div class="float-dot" style="width:16px;height:16px;background:var(--red);top:15px;right:15px;" aria-hidden="true"></div>
-      <h3 style="font-family:var(--font-comic);font-size:1.4rem;letter-spacing:2px;margin-bottom:1.5rem;text-transform:uppercase;">
-        <i class="fas fa-paper-plane" style="color:var(--orange);"></i> Send a Message
+      <div class="float-dot" style="width:16px;height:16px;background:var(--ink);top:15px;right:15px;" aria-hidden="true"></div>
+      <h3 style="font-family:var(--font-comic);font-size:1.4rem;letter-spacing:2px;margin-bottom:1.5rem;text-transform:uppercase; color:var(--primary);">
+        <i class="fas fa-paper-plane" style="color:var(--accent);"></i> Send a Message
       </h3>
       <form id="contactForm" onsubmit="handleContact(event)">
         <div class="form-group">
@@ -110,13 +109,23 @@
           <i class="fas fa-paper-plane"></i> Send Message
         </button>
       </form>
-      <div class="float-dot" style="width:10px;height:10px;background:var(--green);bottom:15px;left:15px;" aria-hidden="true"></div>
+      <div class="float-dot" style="width:10px;height:10px;background:var(--bg-lines);bottom:15px;left:15px;" aria-hidden="true"></div>
     </div>
   </div>
 </main>
 
-<footer class="comic-footer">
-  <p>Ahmad Naufal &copy; 2026 — Portfolio</p>
+<!-- FOOTER -->
+<footer class="notebook-footer">
+  <div class="footer-inner">
+    <div class="footer-text">
+      <p class="footer-line-1">My Portfolio</p>
+      <p class="footer-line-2">Thank you for visiting my Portfolio</p>
+      <p class="footer-line-3">Current Date &amp; Time : <span id="liveDateTime">--</span></p>
+    </div>
+    <button class="back-to-top-btn" id="backToTop" aria-label="Back to top" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
 </footer>
 
 <!-- Toast -->
@@ -149,6 +158,23 @@
   document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
   (function c(){dx+=(mx-dx)*.15;dy+=(my-dy)*.15;dot.style.left=(dx-5)+'px';dot.style.top=(dy-5)+'px';requestAnimationFrame(c);})();
   if('ontouchstart'in window)dot.style.display='none';
+
+  // Back to top
+  document.getElementById('backToTop').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Live date & time
+  function updateDateTime() {
+    const now = new Date();
+    const options = {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    };
+    document.getElementById('liveDateTime').textContent = now.toLocaleDateString('en-US', options);
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
 </script>
 </body>
 </html>

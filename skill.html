@@ -34,9 +34,8 @@
   </div>
 
   <div class="skills-grid">
-    <!-- LANGUAGE SKILLS -->
     <div class="panel panel-skew reveal">
-      <div class="skill-category-title" style="color:var(--blue);">
+      <div class="skill-category-title">
         <i class="fas fa-language" style="font-size:1.3rem;"></i> Language Skills
       </div>
       <div class="lang-item">
@@ -51,12 +50,11 @@
         <span class="lang-name"><i class="fas fa-comment" style="color:var(--orange);"></i> German</span>
         <span class="lang-level basic">Basic</span>
       </div>
-      <div class="float-dot" style="width:12px;height:12px;background:var(--blue);bottom:15px;right:15px;" aria-hidden="true"></div>
+      <div class="float-dot" style="width:12px;height:12px;background:var(--primary);bottom:15px;right:15px;" aria-hidden="true"></div>
     </div>
 
-    <!-- DESIGN SKILLS -->
     <div class="panel panel-skew-r reveal" style="animation-delay:0.1s;">
-      <div class="skill-category-title" style="color:var(--pink);">
+      <div class="skill-category-title">
         <i class="fas fa-palette" style="font-size:1.3rem;"></i> Design Skills
       </div>
       <div class="skill-bar-wrap">
@@ -71,12 +69,11 @@
         <div class="skill-bar-label"><span>Wireframe Design</span><span>Basic</span></div>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="45" style="background:var(--orange);"></div></div>
       </div>
-      <div class="float-dot" style="width:14px;height:14px;background:var(--pink);top:15px;left:15px;" aria-hidden="true"></div>
+      <div class="float-dot" style="width:14px;height:14px;background:var(--accent);top:15px;left:15px;" aria-hidden="true"></div>
     </div>
 
-    <!-- TECHNICAL SKILLS -->
     <div class="panel panel-skew reveal" style="animation-delay:0.2s;">
-      <div class="skill-category-title" style="color:var(--green);">
+      <div class="skill-category-title">
         <i class="fas fa-code" style="font-size:1.3rem;"></i> Technical Skills
       </div>
       <div class="skill-bar-wrap">
@@ -95,13 +92,12 @@
         <div class="skill-bar-label"><span><i class="fas fa-database" style="color:#00758F;"></i> MySQL</span><span>60%</span></div>
         <div class="skill-bar"><div class="skill-bar-fill" data-width="60" style="background:var(--green);"></div></div>
       </div>
-      <div class="float-dot" style="width:10px;height:10px;background:var(--green);bottom:15px;left:15px;" aria-hidden="true"></div>
+      <div class="float-dot" style="width:10px;height:10px;background:var(--bg-lines);bottom:15px;left:15px;" aria-hidden="true"></div>
     </div>
   </div>
 
-  <!-- Additional tools panel -->
-  <div class="panel panel-skew-r reveal" style="margin-top:2rem; background:var(--cream);">
-    <h3 class="skill-category-title" style="color:var(--red);">
+  <div class="panel panel-skew-r reveal" style="margin-top:2rem; background:var(--bg-lines);">
+    <h3 class="skill-category-title">
       <i class="fas fa-tools" style="font-size:1.3rem;"></i> Tools & Software
     </h3>
     <div style="display:flex; flex-wrap:wrap; gap:0.6rem;">
@@ -124,12 +120,21 @@
         <i class="fas fa-terminal" style="color:var(--green);"></i> Terminal
       </span>
     </div>
-    <div class="float-dot" style="width:16px;height:16px;background:var(--red);top:15px;right:15px;" aria-hidden="true"></div>
+    <div class="float-dot" style="width:16px;height:16px;background:var(--primary);top:15px;right:15px;" aria-hidden="true"></div>
   </div>
 </main>
 
-<footer class="comic-footer">
-  <p>Ahmad Naufal &copy; 2026 — Portfolio</p>
+<footer class="notebook-footer">
+  <div class="footer-inner">
+    <div class="footer-text">
+      <p class="footer-line-1">My Portfolio</p>
+      <p class="footer-line-2">Thank you for visiting my Portfolio</p>
+      <p class="footer-line-3">Current Date &amp; Time : <span id="liveDateTime">--</span></p>
+    </div>
+    <button class="back-to-top-btn" id="backToTop" aria-label="Back to top" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
 </footer>
 
 <script>
@@ -142,6 +147,23 @@
   document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
   (function c(){dx+=(mx-dx)*.15;dy+=(my-dy)*.15;dot.style.left=(dx-5)+'px';dot.style.top=(dy-5)+'px';requestAnimationFrame(c);})();
   if('ontouchstart'in window)dot.style.display='none';
+
+  // Back to top
+  document.getElementById('backToTop').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Live date & time
+  function updateDateTime() {
+    const now = new Date();
+    const options = {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    };
+    document.getElementById('liveDateTime').textContent = now.toLocaleDateString('en-US', options);
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
 </script>
 </body>
 </html>
