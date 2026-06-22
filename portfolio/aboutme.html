@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Naufal — About Me</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="aboutme.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="page-indicator">PG 2/6</div>
+
+<nav class="comic-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="location.href='index.html'" tabindex="0" role="button">AHMAD N.</div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i> MENU</button>
+    <div class="nav-links" id="navLinks" role="menubar">
+      <a class="nav-link" href="index.html" role="menuitem">Home</a>
+      <a class="nav-link active" href="aboutme.html" role="menuitem">About Me</a>
+      <a class="nav-link" href="academic.html" role="menuitem">Academic</a>
+      <a class="nav-link" href="skill.html" role="menuitem">Skill</a>
+      <a class="nav-link" href="project.html" role="menuitem">Project</a>
+      <a class="nav-link" href="contact.html" role="menuitem">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <div class="reveal">
+    <h2 class="section-title">Who Am I?</h2>
+  </div>
+
+  <div class="about-grid" style="margin-top: 2rem;">
+    <!-- Left Column: Image + Details + Social -->
+    <div>
+      <div class="panel panel-skew reveal" style="padding: 1.2rem; margin-bottom: 1.5rem;">
+        <div class="about-photo">
+          <img src="diriku.jpg" alt="Ahmad Naufal photo">
+        </div>
+        <div class="float-dot" style="width:14px; height:14px; background:var(--primary); bottom:-10px; right:-10px;" aria-hidden="true"></div>
+      </div>
+
+      <div class="panel panel-skew-r reveal" style="padding: 1.5rem; margin-bottom: 1.5rem;">
+        <h3 style="font-family:var(--font-comic); font-size:1.3rem; letter-spacing:1.5px; margin-bottom:1rem; text-transform:uppercase; color:var(--primary);">Details</h3>
+        <div class="detail-item"><i class="fas fa-envelope"></i><span>naufal091@gmail.com</span></div>
+        <div class="detail-item"><i class="fas fa-phone"></i><span>011 - 237 59701</span></div>
+        <div class="detail-item"><i class="fas fa-map-marker-alt"></i><span>Selangor, Malaysia</span></div>
+
+        <h3 style="font-family:var(--font-comic); font-size:1.3rem; letter-spacing:1.5px; margin:1.5rem 0 1rem; text-transform:uppercase; color:var(--primary);">Find Me Online</h3>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/" class="social-icon" style="background:var(--primary); color:var(--white);" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/AhmadNaufal11" class="social-icon" style="background:var(--ink); color:var(--white);" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/" class="social-icon" style="background:var(--accent); color:var(--white);" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/" class="social-icon" style="background:var(--primary); color:var(--white);" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="float-dot" style="width:10px; height:10px; background:var(--accent); top:15px; right:15px;" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- Right Column: Text + Resume -->
+    <div>
+      <div class="panel panel-skew-r reveal" style="margin-bottom: 1.5rem;">
+        <div class="bubble" style="max-width: 100%; margin-bottom: 1.5rem;">
+          Hi! My Name is Ahmad Naufal. I am a Software Development student at Universti Teknikal Malaysia Melaka (UTeM) who enjoys learning anything about website development, testing and computer architecture.
+        </div>
+        <p style="line-height: 1.8; margin-bottom: 1rem; color: #555;">
+          I like to create simple websites using HTML, CSS, and JavaScript. I also like to configure computer hardware and software while hoping my skill or knowledge about computers can be improved.
+        </p>
+        <p style="line-height: 1.8; margin-bottom: 1.5rem; color: #555;">
+          My goal is to become a skilled software tester and IT Technician. My hobbies are playing badminton and reading comics or books.
+        </p>
+        <div class="float-dot" style="width:16px; height:16px; background:var(--primary); bottom:20px; right:20px;" aria-hidden="true"></div>
+      </div>
+
+      <div class="panel panel-skew reveal" style="margin-bottom: 1.5rem; background: var(--bg-lines);">
+        <h3 style="font-family:var(--font-comic); font-size:1.4rem; letter-spacing:2px; margin-bottom:1rem; text-transform:uppercase; color:var(--primary); text-shadow:1px 1px 0 rgba(0,0,0,0.05);">
+          <i class="fas fa-file-alt" style="color:var(--accent);"></i> Resume
+        </h3>
+        <p style="margin-bottom: 1.2rem; line-height: 1.7; color: var(--ink);">Download my full resume to see my complete education history, skills, and experience in detail.</p>
+        <a href="#" class="comic-btn" onclick="downloadResume(event)">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+        <div class="float-dot" style="width:12px; height:12px; background:var(--accent); top:15px; left:15px;" aria-hidden="true"></div>
+      </div>
+
+      <div class="panel reveal">
+        <h3 style="font-family:var(--font-comic); font-size:1.3rem; letter-spacing:1.5px; margin-bottom:1rem; text-transform:uppercase; color:var(--primary);">What I Bring</h3>
+        <div>
+          <span class="quality-tag" style="background:var(--primary);">Problem Solving</span>
+          <span class="quality-tag" style="background:var(--accent);">Team Collaboration</span>
+          <span class="quality-tag" style="background:var(--ink);">Quick Learner</span>
+          <span class="quality-tag" style="background:#475569;">Adaptable</span>
+          <span class="quality-tag" style="background:var(--primary);">Detail-Oriented</span>
+          <span class="quality-tag" style="background:var(--accent);">Self-Motivated</span>
+          <span class="quality-tag" style="background:var(--ink);">Creative Thinking</span>
+          <span class="quality-tag" style="background:#475569;">Time Management</span>
+        </div>
+        <div class="float-dot" style="width:14px; height:14px; background:var(--bg-lines); bottom:15px; left:15px;" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="notebook-footer">
+  <div class="footer-inner">
+    <div class="footer-text">
+      <p class="footer-line-1">My Portfolio</p>
+      <p class="footer-line-2">Thank you for visiting my Portfolio</p>
+      <p class="footer-line-3">Current Date &amp; Time : <span id="liveDateTime">--</span></p>
+    </div>
+    <button class="back-to-top-btn" id="backToTop" aria-label="Back to top" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div id="toast" style="position:fixed; bottom:30px; right:30px; background:var(--primary); color:var(--white); border:3px solid var(--ink); box-shadow:5px 5px 0 var(--ink); padding:1rem 2rem; font-family:var(--font-comic); font-size:1rem; letter-spacing:1px; z-index:3000; transform:translateX(150%); transition:transform 0.4s cubic-bezier(0.22,1,0.36,1);"></div>
+
+<script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    function downloadResume(e) {
+      e.preventDefault();
+      const link = document.createElement('a');
+      link.href = 'Resume(nopal).pdf';
+      link.download = 'Ahmad_Naufal_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast('Resume download started!');
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg; t.style.transform = 'translateX(0)';
+      setTimeout(() => { t.style.transform = 'translateX(150%)'; }, 3000);
+    }
+
+    const dot = document.getElementById('cursorDot');
+    let mx=0,my=0,dx=0,dy=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+    (function c(){dx+=(mx-dx)*.15;dy+=(my-dy)*.15;dot.style.left=(dx-5)+'px';dot.style.top=(dy-5)+'px';requestAnimationFrame(c);})();
+    if('ontouchstart'in window)dot.style.display='none';
+
+    // Back to top
+    document.getElementById('backToTop').addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Live date & time
+    function updateDateTime() {
+      const now = new Date();
+      const options = {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+      };
+      document.getElementById('liveDateTime').textContent = now.toLocaleDateString('en-US', options);
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
+</body>
+</html>
